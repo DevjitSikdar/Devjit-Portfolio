@@ -60,7 +60,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="lg:hidden fixed inset-0 bg-black/60 z-[50] backdrop-blur-sm"
+                        className="lg:hidden fixed inset-0 bg-black/80 z-[50] backdrop-blur-sm"
                         onClick={() => setIsMobileOpen(false)}
                     />
                 )}
@@ -73,6 +73,10 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
           glass-strong rounded-none lg:rounded-r-2xl
           transition-transform duration-300 lg:translate-x-0
           ${isMobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
+                style={{
+                    backgroundColor: isMobileOpen ? "var(--color-bg)" : undefined,
+                    backgroundImage: isMobileOpen ? "none" : undefined,
+                }}
                 variants={fadeInLeft}
                 initial="hidden"
                 animate="visible"
