@@ -13,7 +13,7 @@ import {
     Twitter,
     ChevronDown,
 } from "lucide-react";
-import { fadeInLeft, staggerContainer, staggerItem } from "@/lib/animations";
+import { staggerContainer, staggerItem } from "@/lib/animations";
 
 interface SidebarProps {
     activeSection: string;
