@@ -67,7 +67,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
             </AnimatePresence>
 
             {/* Sidebar */}
-            <motion.aside
+            <aside
                 className={`fixed lg:sticky top-0 left-0 h-[100dvh] lg:h-screen z-[55] w-[280px] lg:w-[300px] 
           overflow-y-auto scrollbar-hide flex flex-col
           glass-strong rounded-none lg:rounded-r-2xl
@@ -77,9 +77,6 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
                     backgroundColor: isMobileOpen ? "var(--color-bg)" : undefined,
                     backgroundImage: isMobileOpen ? "none" : undefined,
                 }}
-                variants={fadeInLeft}
-                initial="hidden"
-                animate="visible"
             >
                 <div className="flex flex-col items-center p-6 lg:p-8">
                     {/* Avatar */}
@@ -201,7 +198,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
                         ))}
                     </div>
                 </div>
-            </motion.aside>
+            </aside>
         </>
     );
 }
