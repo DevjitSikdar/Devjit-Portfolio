@@ -42,7 +42,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
             {/* Mobile Toggle */}
             <button
                 onClick={() => setIsMobileOpen(!isMobileOpen)}
-                className="lg:hidden fixed top-6 left-6 z-50 p-3 rounded-xl glass-strong"
+                className="lg:hidden fixed top-6 left-6 z-[60] p-3 rounded-xl glass-strong"
                 aria-label="Toggle sidebar"
             >
                 <motion.div
@@ -60,7 +60,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        className="lg:hidden fixed inset-0 bg-black/60 z-40 backdrop-blur-sm"
+                        className="lg:hidden fixed inset-0 bg-black/60 z-[50] backdrop-blur-sm"
                         onClick={() => setIsMobileOpen(false)}
                     />
                 )}
@@ -68,7 +68,7 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
 
             {/* Sidebar */}
             <motion.aside
-                className={`fixed lg:sticky top-0 left-0 h-screen z-40 w-[280px] lg:w-[300px] 
+                className={`fixed lg:sticky top-0 left-0 h-[100dvh] lg:h-screen z-[55] w-[280px] lg:w-[300px] 
           overflow-y-auto scrollbar-hide flex flex-col
           glass-strong rounded-none lg:rounded-r-2xl
           transition-transform duration-300 lg:translate-x-0
